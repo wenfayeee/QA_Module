@@ -10,10 +10,10 @@ Library    XML
 @{chrome_arguments}	    --disable-infobars    --headless    --disable-gpu    --window-size=1280,1024
 ${HOME URL}    https://deriv.com
 ${markets_section}   //*[@id="market-fold"]
-${deriv_life}    //*[text()="deriv life"]//parent::div
+${deriv_life}    //*[text()="deriv life"]//parent::a
 
 # Footer
-${youtube}    //a[@href="https://www.youtube.com/@derivlife"]
+${youtube}    //a[@href="https://www.youtube.com/@deriv"]
 ${reddit}    //a[@href="https://www.reddit.com/user/Deriv_official/"]
 ${telegram}    //a[@href="https://t.me/derivdotcomofficial"]
 ${facebook}    //a[@href="https://www.facebook.com/derivdotcom"]
@@ -91,7 +91,7 @@ Check Trading Platforms
     Page Should Contain    Trade the world’s markets with our popular user-friendly platform.
     Page Should Contain Element    ${deriv_trader}
     Page Should Contain    A whole new trading experience on a powerful yet easy to use platform.
-    Page Should Not Contain Element    ${deriv_go}
+    Page Should Contain Element    ${deriv_go}
     Page Should Contain    Trade multipliers on forex, cryptocurrencies, and synthetic indices with our mobile app.
     Page Should Contain Element    ${deriv_bot}
     Page Should Contain    Automated trading at your fingertips. No coding needed.
@@ -104,13 +104,14 @@ Fill Form
 
 Select Symbol
     Click Element    ${symbol}
-    Click Element    id:AUDUSD 
+    Click Element    id:AUDUSD
 
 Switch To Financial
         Click Element    //p[contains(@class,"typography__Text") and text()="Financial"]
 
 Check Swap Charge
      ${expected_swap}=    Evaluate    100*100000*10*0.5 
+     ${expected_swap}=     Evaluate    "{:,.0f}".format(${expected_swap})
      Element Text Should Be    //*[text()="USD"]//preceding-sibling::div     ${expected_swap}
 
 *** Test Cases ***
@@ -128,7 +129,8 @@ Check Deriv Life
     Page Should Contain    Making an impact that matters
 #check social media link is correct
 Check Social Networks
-    Switch Window     Online trading platform | Forex, commodities, synthetic indices, stocks, and stock indices | Deriv
+    #Switch Window     Online trading platform | Forex, commodities, synthetic indices, stocks, and stock indices | Deriv
+    Go To Homepage
     Scroll Element Into View    //footer
     Page Should Contain Element    ${youtube}
     Page Should Contain Element    ${telegram}

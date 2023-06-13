@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230613 16:09:31.351" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="/home/munnfaye/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Wait Until Page Contains Element">
+<arg>${api_generator}</arg>
+<arg>5</arg>
+<msg timestamp="20230613 16:09:32.146" level="FAIL">No keyword with name 'Wait Until Page Contains Element' found.</msg>
+<status status="FAIL" starttime="20230613 16:09:32.146" endtime="20230613 16:09:32.146"/>
+</kw>
+<kw name="Click Element">
+<arg>${api_generator}</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.147" endtime="20230613 16:09:32.147"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230613 16:09:32.147" endtime="20230613 16:09:32.147"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>//h4[text()="API token"]</arg>
+<arg>5</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.147" endtime="20230613 16:09:32.147"/>
+</kw>
+<kw name="Select Admin Option Only">
+<status status="NOT RUN" starttime="20230613 16:09:32.148" endtime="20230613 16:09:32.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230613 16:09:32.148" endtime="20230613 16:09:32.148"/>
+</kw>
+<kw name="Clear Element Text">
+<arg>token_name</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.149" endtime="20230613 16:09:32.149"/>
+</kw>
+<kw name="Input Text">
+<arg>token_name</arg>
+<arg>${token}</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.150" endtime="20230613 16:09:32.151"/>
+</kw>
+<kw name="Clear Element Text">
+<arg>token_name</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.152" endtime="20230613 16:09:32.152"/>
+</kw>
+<kw name="Click Element">
+<arg>${create_btn}</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.152" endtime="20230613 16:09:32.153"/>
+</kw>
+<kw name="Element Should Be Disabled">
+<arg>${create_btn}</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.153" endtime="20230613 16:09:32.153"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>//div[text()="Please enter a token name."]</arg>
+<arg>10</arg>
+<status status="NOT RUN" starttime="20230613 16:09:32.154" endtime="20230613 16:09:32.154"/>
+</kw>
+<status status="PASS" starttime="20230613 16:09:31.366" endtime="20230613 16:09:45.379"/>
+</kw>
+<status status="PASS" starttime="20230613 16:09:31.365" endtime="20230613 16:09:45.379"/>
+</test>
+<status status="PASS" starttime="20230613 16:09:31.352" endtime="20230613 16:09:45.380"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
